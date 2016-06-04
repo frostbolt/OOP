@@ -1,4 +1,3 @@
-package com.company;
 public class Cone {
 
     private Circle c;

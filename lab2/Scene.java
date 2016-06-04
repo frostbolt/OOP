@@ -1,4 +1,3 @@
-package com.company;
 public class Scene {
     int size;
     int maxSize;
