@@ -1,5 +1,3 @@
-package com.company;
-
 public class Cylinder {
     Circle c;
     float height;
