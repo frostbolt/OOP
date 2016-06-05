@@ -1,12 +1,21 @@
+package com.company;
 public class Sphere {
-
-    private Circle c;
-    private float radius;
+    Circle c;
+    float radius;
 
     Sphere(Point C, float R) {
         c = new Circle(C, R);
         radius = R;
     }
+
+    Sphere(Object a) {
+        if (a.getClass().toString() == "class com.company.Sphere"){
+            Sphere b = (Sphere) a;
+            c = b.c;
+            radius = b.radius;
+        }
+    }
+
 
     public String toString() {
         return "(x-"+c.center.x+")^2 + (y-"+c.center.y+")^2 + (z-"+c.center.z+")^2 <= "+radius*radius;

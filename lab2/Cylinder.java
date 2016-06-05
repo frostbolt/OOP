@@ -1,7 +1,8 @@
-public class Cylinder {
+package com.company;
 
-    private Circle c;
-    private float height;
+public class Cylinder {
+    Circle c;
+    float height;
 
     Cylinder(Point C, float R, float H) {
         c = new Circle(C, R);
@@ -12,6 +13,14 @@ public class Cylinder {
         c=C;
         height = H;
     }
+    Cylinder(Object a) {
+        if (a.getClass().toString() == "class com.company.Cylinder"){
+            Cylinder b = (Cylinder) a;
+            c = b.c;
+            height = b.height;
+        }
+    }
+
     public String toString() {
         return "(x-"+c.center.x+")^2 + (y-"+c.center.y+")^2 <= "+c.radius*c.radius+",\n"+c.center.z+"<= z <= "+ height +".";
     }

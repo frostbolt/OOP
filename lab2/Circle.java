@@ -1,3 +1,5 @@
+package com.company;
+
 public class Circle {
     Point center;
     float radius;

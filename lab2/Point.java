@@ -1,3 +1,5 @@
+package com.company;
+
 public class Point {
     public float x;
     public float y;
@@ -7,6 +9,12 @@ public class Point {
         x = X;
         y = Y;
         z = Z;
+    }
+    Point(Point a) {
+        this(a.x,a.y,a.z);
+    }
+    Point() {
+        this(0,0,0);
     }
     public String toString() {
         return "("+x+","+y+","+z+")";

@@ -1,7 +1,8 @@
+package com.company;
 public class Cone {
 
-    private Circle c;
-    private float height;
+    Circle c;
+    float height;
 
     Cone(Point C, float R, float H) {
         c = new Circle(C, R);
@@ -11,6 +12,14 @@ public class Cone {
     Cone(Circle C, float H) {
         c=C;
         height = H;
+    }
+
+    Cone(Object a) {
+        if (a.getClass().toString() == "class com.company.Cone"){
+            Cone b = (Cone) a;
+            c = b.c;
+            height = b.height;
+        }
     }
 
     public String toString() {
